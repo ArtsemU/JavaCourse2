@@ -1,7 +1,6 @@
 package collection;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ArrayListExample1 {
     public static void main(String[] args) {
@@ -9,19 +8,25 @@ public class ArrayListExample1 {
         arrayList1.add("awd");
         arrayList1.add(null);
         arrayList1.add("Maria");
+        arrayList1.add(1,"Maria_2");
 
-        System.out.println(arrayList1);
+    for(String s : arrayList1) {
+        System.out.println(s);
+    }
 
-        ArrayList<String> arrayList2 = new ArrayList<>();
-        arrayList2.add("spmething");
-        arrayList2.add("dsczxc__");
+    // get
+    for (int i = 0; i <arrayList1.size();i++){
+        System.out.println(arrayList1.get(i));
+    }
 
-        List<String> arrayList3 = new ArrayList<>();
+    // set
+    arrayList1.set(2, "SomeName");
 
-        ArrayList<String> arrayList4 = new ArrayList<>(arrayList1);
+        for(String s : arrayList1) {
+            System.out.println(s);
+        }
+        arrayList1.remove(0);
 
-        System.out.println(arrayList1);
-        System.out.println(arrayList4);
 
     }
 }
